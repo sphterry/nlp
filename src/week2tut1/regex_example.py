@@ -9,3 +9,6 @@ TEXT = "Check answers in Python 109, 1.09 patch pitch pt piiiit"
 
 for pattern in REGEX:
     re_show(pattern, TEXT)
+
+tk = RegexpTokenizer('(b+(ab)*)*', gaps=True)
+print(tk.tokenize("bbabab babab ab aaa ba"))
