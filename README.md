@@ -1,4 +1,4 @@
-# nlp
+# Natural Language Processing (nlp)
 Code and information produced for tutorials and revision
 
 ## Setup
