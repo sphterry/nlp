@@ -4,12 +4,14 @@ from nltk.tokenize import WordPunctTokenizer
 # Q3 tokenise this text in spacy and nltk, compare:
 TEXT = "E.g. I.B.M.’s CEO wrote at 14:15: ’Yesterday’s speech by Dr. J.-L. O’Neill II didn’t deserve an A+!’."
 
+# TODO: try with en_core_web_sm and compare
 def spacy_tokenise(s):
     nlp = spacy.blank("en")
 
     for token in nlp(s):
         print(token)
 
+# TODO: try with word_tokenise and compare
 def nltk_tokenise(s):
     tokeniser = WordPunctTokenizer()
 
