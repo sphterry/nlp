@@ -9,6 +9,7 @@ from nltk.corpus import gutenberg
 START = '<s>'
 END = '</s>'
 TEXT = 'austen-emma.txt'
+# gutenberg - Collection of public domains works
 words = set(gutenberg.words(TEXT)).union([END]) # ands end symbol to set of words but not start symbol ?
 sentences = gutenberg.sents(TEXT)
 
