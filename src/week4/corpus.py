@@ -23,12 +23,13 @@ tags = [tag for (_, tag) in tagged_words]
 print(get_most_freq(tags))
 
 # 15 most frequent nouns
-nouns = [word for (word, tag) in tagged_words if tag.startswith("NN")]
+nouns = [word for (word, tag) in tagged_words if tag.startswith("N")]
 print(get_most_freq(nouns))
 
 # words that can be plural nouns (NNS) OR third person singular verbs (VBZ) (ie: deals, files)
-other = [word for (word, tag) in tagged_words if tag == "NNS" or tag=="VBZ"]
-print(get_most_freq(other))
+plurals = {word for (word, tag) in tagged_words if tag == "NNS"}
+vbz = {word for (word, tag) in tagged_words if tag == "VBZ"}
+print(sorted(plurals & vbz))
 
 # sequences of words matching IN + DT + NN
 for sentence in brown.tagged_sents(categories=CATS):
